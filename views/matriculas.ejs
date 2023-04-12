@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Matrículas</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .checkbox-group {
+          display: block;
+          margin-bottom: 10px;
+        }
+      </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Sistema de Matrículas</h1>
+        <hr>
+
+        <h3>Seleccione un curso:</h3>
+        <form action="/confirmacion" method="post">
+            <div class="form-group">
+                <label for="curso">Curso:</label>
+                <select class="form-control" id="curso" name="curso">
+                    <option value="Java">Java</option>
+                    <option value="PHP">PHP</option>
+                    <option value="Net">Net</option>
+                </select>
+            </div>
+
+            <h3>Escoja su nivel :</h3>
+            <label for="nivel">Nivel:</label>
+        
+            <div class="checkbox-group">
+                <input type="checkbox" id="intermedio" name="nivel" value="intermedio" onclick="deseleccionar(this.id)">
+                <label for="intermedio">Intermedio</label>
+              </div>
+              
+              <div class="checkbox-group">
+                <input type="checkbox" id="basico" name="nivel" value="basico" onclick="deseleccionar(this.id)">
+                <label for="basico">Básico</label>
+              </div>
+              
+              <div class="checkbox-group">
+                <input type="checkbox" id="avanzado" name="nivel" value="avanzado" onclick="deseleccionar(this.id)">
+                <label for="avanzado">Avanzado</label>
+              </div>
+
+
+
+
+            <h3>Seleccione un medio de pago:</h3>
+            <div class="form-group">
+                <label for="medioPago">Medio de Pago:</label>
+                <select class="form-control" id="medioPago" name="medioPago">
+                    <option value="Tarjeta de crédito">Tarjeta de crédito</option>
+                    <option value="Pago en efectivo">Pago en efectivo</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Confirmar Matrícula</button>
+        </form>
+    </div>
+</body>
+<script>
+
+    function deseleccionar(id) {
+  // Obtener todas las casillas de verificación
+  var checkboxes = document.getElementsByName('nivel');
+
+  // Recorrer todas las casillas de verificación
+  for (var i = 0; i < checkboxes.length; i++) {
+    if (checkboxes[i].id !== id) {
+      checkboxes[i].checked = false;
+    }
+  }
+}
+
+</script>
+</html>

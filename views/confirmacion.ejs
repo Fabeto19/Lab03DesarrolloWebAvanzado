@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirmación de Matrícula</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Confirmación de Matrícula</h1>
+        <hr>
+
+        <h3>Curso seleccionado:</h3>
+        <p><strong>Curso:</strong> <%= curso %></p>
+
+        <h3>Nivel seleccionado:</h3>
+        <p><strong>Nivel:</strong> <%= nivel %></p>
+
+        <h3>Medio de pago seleccionado:</h3>
+        <p><strong>Medio de Pago:</strong> <%= medioPago %></p>
+
+        <h3>Datos de confirmación:</h3>
+        <p>¡Su matrícula ha sido confirmada! Los siguientes son los detalles de su matrícula:</p>
+
+        <div>
+            <h2>Resumen de compra</h2>
+            <ul>
+                <li><strong>Curso:</strong> <%= curso %></li>
+                <li><strong>Nivel:</strong> <%= nivel %></li>
+                <li><strong>Medio de Pago:</strong> <%= medioPago %></li>
+                <li><strong>Total a Pagar:</strong> <%= precio %></li> <!-- Agrega esta línea -->
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
